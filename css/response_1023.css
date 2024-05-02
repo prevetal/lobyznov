@@ -1,0 +1,109 @@
+@media print,
+(max-width: 1023px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --sidebar_width: 100%;
+    }
+
+
+
+    .content
+    {
+        padding: 40px 24px 114px;
+    }
+
+
+
+    /*-------------
+        Sidebar
+    -------------*/
+    aside
+    {
+        top: auto;
+        bottom: 0;
+
+        height: auto;
+        min-height: 0;
+
+        background: #fff;
+    }
+
+
+    aside .logo
+    {
+        display: none;
+    }
+
+
+
+    aside .lk_menu
+    {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        padding: 12px 24px;
+    }
+
+
+    aside .lk_menu > *
+    {
+        width: 33.333%;
+    }
+
+
+    aside .lk_menu > * + *
+    {
+        margin: 0;
+        padding: 0;
+
+        border: none;
+    }
+
+
+    aside .lk_menu a
+    {
+        justify-content: center;
+
+        padding: 12px;
+
+        border-top: 2px solid transparent;
+    }
+
+
+    aside .lk_menu span
+    {
+        width: auto;
+        margin-left: 8px;
+    }
+
+
+    aside .lk_menu a:hover,
+    aside .lk_menu a.active
+    {
+        background: #3c82f6;
+    }
+
+
+
+    /*----------
+        Auth
+    ----------*/
+    .auth .data
+    {
+        width: 100%;
+        padding: 0;
+    }
+
+
+    .auth .image
+    {
+        display: none;
+    }
+}

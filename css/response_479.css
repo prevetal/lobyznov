@@ -1,0 +1,85 @@
+@media (max-width: 479px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    .cont
+    {
+        padding: 0 20px;
+    }
+
+
+    .content
+    {
+        padding: 40px 20px 102px;
+    }
+
+
+
+    /*-------------
+        Sidebar
+    -------------*/
+    aside .lk_menu
+    {
+        padding: 16px 8px;
+
+        border-radius: 12px 12px 0 0;
+    }
+
+
+
+    /*----------
+        Auth
+    ----------*/
+    .auth
+    {
+        padding: 48px 0;
+    }
+
+
+    .auth .title
+    {
+        margin-bottom: 32px;
+    }
+
+
+
+    /*---------------
+        User info
+    ---------------*/
+    .user_info
+    {
+        margin-bottom: 24px;
+    }
+
+
+    .user_info .row
+    {
+        margin-bottom: -4px;
+    }
+
+    .user_info .row > *
+    {
+        margin-bottom: 4px;
+    }
+
+
+
+    /*---------------------
+        List indicators
+    ---------------------*/
+    .list_indicators .item
+    {
+        justify-content: space-between;
+    }
+
+
+    .list_indicators .col_code,
+    .list_indicators .col_value,
+    .list_indicators .col_result,
+    .list_indicators .col_minimum,
+    .list_indicators .col_maximum
+    {
+        width: calc(50% - 8px);
+    }
+}

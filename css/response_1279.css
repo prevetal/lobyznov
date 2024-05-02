@@ -1,0 +1,457 @@
+@media print,
+(max-width: 1279px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --font_size_title: 40px;
+        --sidebar_width: 240px;
+    }
+
+
+    html.custom_scroll ::-webkit-scrollbar
+    {
+        width: 5px;
+        height: 5px;
+    }
+
+
+    .content
+    {
+        padding: 32px 24px 32px calc(var(--sidebar_width) + 24px);
+    }
+
+
+
+    /*-------------
+        Sidebar
+    -------------*/
+    aside .logo
+    {
+        padding: 32px 24px 24px;
+    }
+
+
+    aside .lk_menu
+    {
+        padding: 24px;
+    }
+
+
+    aside .lk_menu a
+    {
+        font-size: 15px;
+        line-height: 21px;
+    }
+
+
+
+    /*----------
+        Auth
+    ----------*/
+    .auth .data
+    {
+        padding: 0 40px 0 0;
+    }
+
+
+    .auth .image
+    {
+        height: 820px;
+    }
+
+
+    .auth .title
+    {
+        margin-bottom: 40px;
+    }
+
+
+
+    /*--------------
+        Patients
+    --------------*/
+    .patients .titles
+    {
+        font-size: 14px;
+        line-height: 20px;
+
+        margin-bottom: 12px;
+    }
+
+    .patients .titles > *
+    {
+        padding: 12px;
+    }
+
+
+    .patients .patient .head
+    {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .patients .patient .head > *
+    {
+        padding: 8px 12px;
+    }
+
+
+    .patients .patient .item
+    {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .patients .patient .item > *
+    {
+        padding: 8px 12px;
+    }
+
+
+    .patients .col_id
+    {
+        width: 112px;
+        min-width: 112px;
+    }
+
+    .patients .col_status
+    {
+        width: 112px;
+        min-width: 112px;
+    }
+
+    .patients .col_type
+    {
+        width: 180px;
+        min-width: 180px;
+    }
+
+    .patients .col_date
+    {
+        width: 140px;
+        min-width: 140px;
+    }
+
+
+
+    /*---------------------
+        List indicators
+    ---------------------*/
+    .list_indicators
+    {
+        padding: 0;
+
+        border-radius: 0;
+        background: none;
+    }
+
+
+    .list_indicators .titles
+    {
+        display: none;
+    }
+
+
+    .list_indicators .item
+    {
+        font-weight: 600;
+        line-height: 18px;
+
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        padding: 24px 16px;
+
+        border-radius: 8px;
+        background: #fff;
+    }
+
+    .list_indicators .item + .item
+    {
+        margin-top: 16px;
+    }
+
+
+    .list_indicators .item > *
+    {
+        position: relative;
+
+        order: 2;
+
+        margin-top: 16px;
+        padding: 20px 0 0;
+    }
+
+    .list_indicators .item > *:before
+    {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: block;
+
+        content: attr(data-column);
+
+        color: #a4abb5;
+    }
+
+
+    .list_indicators .item .col_name
+    {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+
+        order: 1;
+
+        margin-top: 0;
+        padding-bottom: 16px;
+
+        color: var(--text_color);
+        border-bottom: 1px solid #f3f3f4;
+    }
+
+    .list_indicators .item .col_name:before
+    {
+        font-weight: 400;
+    }
+
+
+    .list_indicators .item .col_comment
+    {
+        padding-top: 16px;
+
+        color: var(--text_color);
+        border-top: 1px solid #f3f3f4;
+    }
+
+    .list_indicators .item .col_comment:before
+    {
+        display: none;
+    }
+
+    .list_indicators .item .col_comment:empty
+    {
+        display: none;
+    }
+
+
+    .list_indicators .col_code,
+    .list_indicators .col_value,
+    .list_indicators .col_result,
+    .list_indicators .col_minimum,
+    .list_indicators .col_maximum
+    {
+        width: 20%;
+        min-width: 0;
+    }
+
+    .list_indicators .col_name
+    {
+        width: 100%;
+        min-width: 100%;
+    }
+
+
+
+    /*--------------------
+        Interpretation
+    --------------------*/
+    .interpretation
+    {
+        padding: 0;
+
+        border-radius: 0;
+        background: none;
+    }
+
+
+    .interpretation .title
+    {
+        width: 100%;
+    }
+
+
+    .interpretation .filter
+    {
+        margin-top: 20px;
+        margin-left: 0;
+        padding: 0;
+
+        border-radius: 0;
+        background: none;
+    }
+
+
+    .interpretation .titles
+    {
+        display: none;
+    }
+
+
+    .interpretation .item
+    {
+        font-weight: 600;
+        line-height: 18px;
+
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        padding: 24px 16px;
+
+        border-radius: 8px;
+        background: #fff;
+    }
+
+    .interpretation .item + .item
+    {
+        margin-top: 16px;
+    }
+
+
+    .interpretation .item > *
+    {
+        position: relative;
+
+        order: 2;
+
+        min-height: 0;
+        margin-top: 16px;
+        padding: 20px 0 0;
+    }
+
+    .interpretation .item > * + *
+    {
+        border: none;
+    }
+
+    .interpretation .item > *:before
+    {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: block;
+
+        content: attr(data-column);
+
+        color: #a4abb5;
+    }
+
+
+    .interpretation .item .col_name
+    {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+
+        order: 1;
+
+        margin-top: 0;
+        padding-bottom: 16px;
+
+        color: var(--text_color);
+        border-bottom: 1px solid #f3f3f4;
+    }
+
+    .interpretation .item .col_name:before
+    {
+        font-weight: 400;
+    }
+
+    .interpretation .item .col_name .icon
+    {
+        display: none;
+    }
+
+    .interpretation .item .col_name span
+    {
+        width: 100%;
+    }
+
+
+    .interpretation .item .col_metabolism
+    {
+        padding-top: 36px;
+
+        color: var(--text_color);
+        border-top: 1px solid #f3f3f4;
+    }
+
+    .interpretation .item .col_metabolism:before
+    {
+        top: 16px;
+    }
+
+
+    .interpretation .item .col_info
+    {
+        color: var(--text_color);
+    }
+
+
+    .interpretation .item .col_metabolism div,
+    .interpretation .item .col_info div
+    {
+        display: block;
+        overflow: visible;
+    }
+
+
+    .interpretation .col_code,
+    .interpretation .col_value,
+    .interpretation .col_result
+    {
+        width: 20%;
+        min-width: 0;
+    }
+
+    .interpretation .col_name
+    {
+        width: 100%;
+        min-width: 100%;
+    }
+
+
+
+    /*---------------
+        User info
+    ---------------*/
+    .user_info
+    {
+        margin-bottom: 32px;
+    }
+
+
+    .user_info .row
+    {
+        margin-left: -20px;
+    }
+
+
+    .user_info .row > *
+    {
+        margin-left: 20px;
+    }
+
+
+
+    /*-------------
+        LK info
+    -------------*/
+    .lk_info .data .row > *
+    {
+        width: calc(50% - 16px);
+    }
+}

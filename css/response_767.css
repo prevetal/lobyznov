@@ -1,0 +1,444 @@
+@media print,
+(max-width: 767px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    .cont
+    {
+        padding: 0 24px;
+    }
+
+
+
+    /*-------------
+        Sidebar
+    -------------*/
+    aside .lk_menu a span
+    {
+        display: none;
+    }
+
+
+
+    /*---------------
+        Page head
+    ---------------*/
+    .page_title
+    {
+        margin-top: 20px;
+    }
+
+    .save_btn + .page_title
+    {
+        padding: 0;
+    }
+
+
+
+    .page_head .save_btn
+    {
+        display: none;
+    }
+
+
+
+    /*------------
+        Search
+    ------------*/
+    .search .icon
+    {
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        bottom: 0;
+
+        margin: auto 0;
+
+        pointer-events: none;
+    }
+
+
+    .search .input
+    {
+        width: 24px;
+
+        transition: width .2s linear;
+
+        opacity: 0;
+    }
+
+
+    .search .input:focus
+    {
+        width: calc(100% - 40px);
+        padding-left: 40px;
+
+        opacity: 1;
+    }
+
+
+
+    /*--------------
+        Patients
+    --------------*/
+    .patients
+    {
+        padding: 0;
+
+        border-radius: 0;
+        background: none;
+    }
+
+
+    .patients .titles
+    {
+        display: none;
+    }
+
+
+    .patients .patient
+    {
+        padding: 24px 16px;
+
+        border-radius: 8px;
+        background: #fff;
+    }
+
+    .patients .patient + .patient
+    {
+        margin-top: 16px;
+    }
+
+
+    .patients .patient .head
+    {
+        font-weight: 600;
+        line-height: 18px;
+
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        padding: 0;
+
+        border: none;
+        border-radius: 0;
+        background: none;
+    }
+
+
+    .patients .patient .head > *
+    {
+        position: relative;
+
+        padding: 20px 0 0;
+    }
+
+    .patients .patient .head > *:before
+    {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: block;
+
+        content: attr(data-column);
+
+        color: #a4abb5;
+    }
+
+
+    .patients .patient .col_patient
+    {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+
+        order: 3;
+
+        margin-top: 16px;
+        padding-top: 36px;
+
+        color: var(--text_color);
+        border-top: 1px solid #f3f3f4;
+    }
+
+    .patients .patient .col_patient:before
+    {
+        font-weight: 400;
+
+        top: 16px;
+    }
+
+
+    .patients .patient .col_type
+    {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+
+        order: 3;
+
+        margin-top: 16px;
+    }
+
+
+    .patients .patient .col_status
+    {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        order: 4;
+
+        margin-top: 16px;
+        padding: 0;
+    }
+
+
+    .patients .patient .col_status:before
+    {
+        position: relative;
+
+        margin-right: 12px;
+    }
+
+
+    .patients .patient .data
+    {
+        margin: 16px 0 0;
+        padding: 0;
+
+        border: none;
+    }
+
+
+    .patients .patient .item
+    {
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        padding: 16px;
+
+        border-radius: 4px;
+        background: #dde3fc;
+    }
+
+
+    .patients .patient .item > *
+    {
+        font-weight: 600;
+
+        position: relative;
+
+        padding: 20px 0 0;
+    }
+
+    .patients .patient .item > *:before
+    {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: block;
+
+        content: attr(data-column);
+
+        color: #a4abb5;
+    }
+
+
+    .patients .patient .item .col_patient
+    {
+        display: none;
+    }
+
+
+    .patients .patient .item .col_id
+    {
+        width: 112px;
+        min-width: 112px;
+    }
+
+
+    .patients .patient .item .col_date
+    {
+        width: calc(100% - 128px);
+        min-width: calc(100% - 128px);
+    }
+
+
+    .patients .patient .item .col_status
+    {
+        padding: 0;
+    }
+
+    .patients .patient .item .col_status:before
+    {
+        position: relative;
+
+        margin-right: 12px;
+    }
+
+
+    .patients .col_id
+    {
+        width: 126px;
+        min-width: 126px;
+    }
+
+    .patients .col_date
+    {
+        width: calc(100% - 146px);
+        min-width: calc(100% - 146px);
+    }
+
+    .patients .col_type,
+    .patients .col_status,
+    .patients .col_patient
+    {
+        width: 100%;
+        min-width: 100%;
+    }
+
+
+
+    /*---------------------
+        List indicators
+    ---------------------*/
+    .list_indicators .col_code,
+    .list_indicators .col_value,
+    .list_indicators .col_result,
+    .list_indicators .col_minimum,
+    .list_indicators .col_maximum
+    {
+        width: 33.333%;
+    }
+
+
+
+    /*--------------------
+        Interpretation
+    --------------------*/
+    .interpretation .col_code,
+    .interpretation .col_value,
+    .interpretation .col_result
+    {
+        width: 33.333%;
+    }
+
+
+
+    /*---------------
+        User info
+    ---------------*/
+    .user_info
+    {
+        margin-bottom: 28px;
+    }
+
+
+    .user_info .row > *:nth-child(3) ~ *
+    {
+        width: calc(100% + 68px);
+        margin-left: -68px;
+    }
+
+    .user_info .row > *:nth-child(4)
+    {
+        margin-top: 8px;
+    }
+
+
+
+    /*-------------
+        LK info
+    -------------*/
+    .lk_info .data .row
+    {
+        margin-left: 0;
+    }
+
+    .lk_info .data .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .lk_info .data .item .link a
+    {
+        display: block;
+
+        text-align: center;
+    }
+
+
+
+    .lk_info .mob_save_btn
+    {
+        display: flex;
+    }
+
+
+
+
+    /*------------
+        Schema
+    ------------*/
+    .schema
+    {
+        padding: 12px;
+
+        border-radius: 24px;
+    }
+
+
+    .schema .btns
+    {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        width: 100%;
+        margin-top: 12px;
+    }
+
+
+    .schema .data_wrap
+    {
+        width: 100%;
+        height: 440px;
+    }
+
+
+    .schema .btns > * + *
+    {
+        margin-top: 0;
+        margin-left: 5px;
+    }
+
+
+    .schema .btns .fullscreen_btn
+    {
+        margin-top: 0;
+        margin-left: 16px;
+    }
+
+
+    .schema.fullscreen .btns
+    {
+        padding: 12px;
+    }
+}

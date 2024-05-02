@@ -1,0 +1,213 @@
+@media print,
+(max-width: 1439px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --font_size_title: 44px;
+    }
+
+
+
+    /*----------
+        Auth
+    ----------*/
+    .auth
+    {
+        padding: 60px 0;
+    }
+
+
+    .auth .data
+    {
+        padding: 0 60px;
+    }
+
+
+    .auth .image
+    {
+        height: 836px;
+    }
+
+
+    .auth .title
+    {
+        margin-bottom: 48px;
+    }
+
+
+
+    /*--------------
+        Patients
+    --------------*/
+    .patients .col_type
+    {
+        width: 240px;
+        min-width: 240px;
+    }
+
+
+
+    /*---------------------
+        List indicators
+    ---------------------*/
+    .list_indicators .title
+    {
+        margin-bottom: 24px;
+    }
+
+
+
+    .list_indicators .titles
+    {
+        font-size: 14px;
+        line-height: 20px;
+
+        margin-bottom: 12px;
+    }
+
+    .list_indicators .titles > *
+    {
+        padding: 12px;
+    }
+
+
+
+    .list_indicators .item
+    {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .list_indicators .item > *
+    {
+        padding: 4px 12px;
+    }
+
+
+
+    .list_indicators .col_code
+    {
+        width: 80px;
+        min-width: 80px;
+    }
+
+    .list_indicators .col_name
+    {
+        width: 140px;
+        min-width: 140px;
+    }
+
+    .list_indicators .col_value
+    {
+        width: 88px;
+        min-width: 88px;
+    }
+
+    .list_indicators .col_result
+    {
+        width: 100px;
+        min-width: 100px;
+    }
+
+    .list_indicators .col_minimum
+    {
+        width: 140px;
+        min-width: 140px;
+    }
+
+    .list_indicators .col_maximum
+    {
+        width: 140px;
+        min-width: 140px;
+    }
+
+
+
+    /*--------------------
+        Interpretation
+    --------------------*/
+    .interpretation .head
+    {
+        margin-bottom: 24px;
+    }
+
+
+
+    .interpretation .titles
+    {
+        font-size: 14px;
+        line-height: 20px;
+
+        margin-bottom: 12px;
+    }
+
+    .interpretation .titles > *
+    {
+        padding: 12px;
+    }
+
+
+
+    .interpretation .item
+    {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .interpretation .item > *
+    {
+        padding: 4px 12px;
+    }
+
+
+
+    .interpretation .col_code
+    {
+        width: 96px;
+        min-width: 96px;
+    }
+
+    .interpretation .col_name
+    {
+        width: 160px;
+        min-width: 160px;
+    }
+
+    .interpretation .col_value
+    {
+        width: 100px;
+        min-width: 100px;
+    }
+
+    .interpretation .col_result
+    {
+        width: 112px;
+        min-width: 112px;
+    }
+
+
+
+    /*------------
+        Schema
+    ------------*/
+    .schema
+    {
+        padding: 16px;
+    }
+
+
+    .schema .btns
+    {
+        margin-top: 32px;
+    }
+
+
+    .schema .data_wrap
+    {
+        width: calc(100% - 48px);
+        height: 520px;
+    }
+}
