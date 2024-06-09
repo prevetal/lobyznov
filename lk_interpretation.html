@@ -29,6 +29,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 
 		<!-- Connecting style files -->
+		<link rel="stylesheet" href="css/fancybox.css" async>
 		<link rel="stylesheet" href="css/styles.css" async>
 
 		<link rel="stylesheet" href="css/response_1439.css" media="print, (max-width: 1439px)" async>
@@ -116,240 +117,426 @@
 								<div class="title">Результат в виде интерпретации</div>
 
 								<div class="filter">
-									<button class="btn active" data-filter="item">Все</button>
-									<button class="btn" data-filter="normal">Норма</button>
-									<button class="btn" data-filter="downgraded">Понижено</button>
+									<button class="btn active">Все</button>
+									<button class="btn">Повышено</button>
+									<button class="btn">Понижено</button>
+
+									<!-- <button class="btn active" data-filter="item">Все</button>
 									<button class="btn" data-filter="increased">Повышено</button>
+									<button class="btn" data-filter="downgraded">Понижено</button> -->
 								</div>
 							</div>
 
 							<div class="titles">
-								<div class="col_name">Наименование</div>
+								<div class="col_id">id</div>
 								<div class="col_code">Код</div>
-								<div class="col_value">Значение</div>
-								<div class="col_result">Результат</div>
-								<div class="col_metabolism">Раздел обмена веществ</div>
-								<div class="col_info">Клинически значимая инфомарция</div>
+								<div class="col_name">Наименование</div>
+
+								<div class="col_value">
+									<span>Значение</span>
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_sort"></use></svg>
+								</div>
+
+								<div class="col_result">
+									<span>Результат</span>
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_sort"></use></svg>
+								</div>
 							</div>
 
 							<div class="list">
-								<div class="item normal">
-									<div class="col_name" data-column="Наименование">
-										<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
-										<span>Аргинин (Arg)</span>
+								<div class="item">
+									<div class="top">
+										<div class="col_id" data-column="ID">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+											<span>ORG 1</span>
+										</div>
+
+										<div class="col_code" data-column="Код">Т27-11</div>
+										<div class="col_name" data-column="Наименование">Изолейцин ( Lie)</div>
+										<div class="col_value" data-column="Значение">8.87</div>
+
+										<div class="col_result" data-column="Результат">
+											<span class="red">Повышено</span>
+										</div>
+
+										<svg class="mob_arr"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
 									</div>
 
-									<div class="col_code" data-column="Код">N27-11</div>
-									<div class="col_value" data-column="Значение">8.87</div>
+									<div class="data">
+										<div>
+											<div class="label">Раздел обмена веществ</div>
 
-									<div class="col_result" data-column="Результат">
-										<span class="green">Норма</span>
-									</div>
+											<div class="desc">Аспартат необходим для синтеза аргининоянтарской кислоты (Предшественником аргинина) из цитруллина [1]</div>
+										</div>
 
-									<div class="col_metabolism" data-column="Раздел обмена веществ">
-										<div>Аспартат необходим для синтеза аргининоянтарской кислоты (Предшественником аргинина) из цитруллина [1]</div>
-									</div>
+										<div>
+											<div class="label">Клинически значимая инфомарция</div>
 
-									<div class="col_info" data-column="Клинически значимая инфомарция">
-										<div>Связь через одно соединение, основной путь синтеза аргинина: Синетз цитруллина в митохондрии энтероцитов кишечника, затем освобождение цитруллина в организм для синтеза аргинина вне митохондрии</div>
-									</div>
-								</div>
-
-								<div class="item normal">
-									<div class="col_name" data-column="Наименование">
-										<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
-										<span>Аргинин (Arg)</span>
-									</div>
-
-									<div class="col_code" data-column="Код">N27-11</div>
-									<div class="col_value" data-column="Значение">8.87</div>
-
-									<div class="col_result" data-column="Результат">
-										<span class="green">Норма</span>
-									</div>
-
-									<div class="col_metabolism" data-column="Раздел обмена веществ">
-										<div>Аспартат необходим для синтеза аргининоянтарской кислоты (Предшественником аргинина) из цитруллина [1]</div>
-									</div>
-
-									<div class="col_info" data-column="Клинически значимая инфомарция">
-										<div>Связь через одно соединение, основной путь синтеза аргинина: Синетз цитруллина в митохондрии энтероцитов кишечника, затем освобождение цитруллина в организм для синтеза аргинина вне митохондрии</div>
+											<div class="desc">Связь через одно соединение, основной путь синтеза аргинина: Синетз цитруллина в митохондрии энтероцитов кишечника, затем освобождение цитруллина в организм для синтеза аргинина вне митохондрии</div>
+										</div>
 									</div>
 								</div>
 
-								<div class="item increased">
-									<div class="col_name" data-column="Наименование">
-										<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
-										<span>Аргинин (Arg)</span>
+								<div class="item">
+									<div class="top">
+										<div class="col_id" data-column="ID">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+											<span>ORG 1</span>
+										</div>
+
+										<div class="col_code" data-column="Код">Т27-11</div>
+										<div class="col_name" data-column="Наименование">Изолейцин ( Lie)</div>
+										<div class="col_value" data-column="Значение">8.87</div>
+
+										<div class="col_result" data-column="Результат">
+											<span class="red">Повышено</span>
+										</div>
+
+										<svg class="mob_arr"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
 									</div>
 
-									<div class="col_code" data-column="Код">N27-11</div>
-									<div class="col_value" data-column="Значение">8.87</div>
+									<div class="data">
+										<div>
+											<div class="label">Раздел обмена веществ</div>
 
-									<div class="col_result" data-column="Результат">
-										<span class="red">Повышено</span>
-									</div>
+											<div class="desc">Аспартат необходим для синтеза аргининоянтарской кислоты (Предшественником аргинина) из цитруллина [1]</div>
+										</div>
 
-									<div class="col_metabolism" data-column="Раздел обмена веществ">
-										<div>Аспартат необходим для синтеза аргининоянтарской кислоты (Предшественником аргинина) из цитруллина [1]</div>
-									</div>
+										<div>
+											<div class="label">Клинически значимая инфомарция</div>
 
-									<div class="col_info" data-column="Клинически значимая инфомарция">
-										<div>Связь через одно соединение, основной путь синтеза аргинина: Синетз цитруллина в митохондрии энтероцитов кишечника, затем освобождение цитруллина в организм для синтеза аргинина вне митохондрии</div>
-									</div>
-								</div>
-
-								<div class="item normal">
-									<div class="col_name" data-column="Наименование">
-										<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
-										<span>Аргинин (Arg)</span>
-									</div>
-
-									<div class="col_code" data-column="Код">N27-11</div>
-									<div class="col_value" data-column="Значение">8.87</div>
-
-									<div class="col_result" data-column="Результат">
-										<span class="green">Норма</span>
-									</div>
-
-									<div class="col_metabolism" data-column="Раздел обмена веществ">
-										<div>Аспартат необходим для синтеза аргининоянтарской кислоты (Предшественником аргинина) из цитруллина [1]</div>
-									</div>
-
-									<div class="col_info" data-column="Клинически значимая инфомарция">
-										<div>Связь через одно соединение, основной путь синтеза аргинина: Синетз цитруллина в митохондрии энтероцитов кишечника, затем освобождение цитруллина в организм для синтеза аргинина вне митохондрии</div>
+											<div class="desc">Связь через одно соединение, основной путь синтеза аргинина: Синетз цитруллина в митохондрии энтероцитов кишечника, затем освобождение цитруллина в организм для синтеза аргинина вне митохондрии</div>
+										</div>
 									</div>
 								</div>
 
-								<div class="item increased">
-									<div class="col_name" data-column="Наименование">
-										<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
-										<span>Аргинин (Arg)</span>
+								<div class="item">
+									<div class="top">
+										<div class="col_id" data-column="ID">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+											<span>ORG 1</span>
+										</div>
+
+										<div class="col_code" data-column="Код">Т27-11</div>
+										<div class="col_name" data-column="Наименование">Изолейцин ( Lie)</div>
+										<div class="col_value" data-column="Значение">8.87</div>
+
+										<div class="col_result" data-column="Результат">
+											<span class="red">Повышено</span>
+										</div>
+
+										<svg class="mob_arr"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
 									</div>
 
-									<div class="col_code" data-column="Код">N27-11</div>
-									<div class="col_value" data-column="Значение">8.87</div>
+									<div class="data">
+										<div>
+											<div class="label">Раздел обмена веществ</div>
 
-									<div class="col_result" data-column="Результат">
-										<span class="red">Повышено</span>
-									</div>
+											<div class="desc">Аспартат необходим для синтеза аргининоянтарской кислоты (Предшественником аргинина) из цитруллина [1]</div>
+										</div>
 
-									<div class="col_metabolism" data-column="Раздел обмена веществ">
-										<div>Аспартат необходим для синтеза аргининоянтарской кислоты (Предшественником аргинина) из цитруллина [1]</div>
-									</div>
+										<div>
+											<div class="label">Клинически значимая инфомарция</div>
 
-									<div class="col_info" data-column="Клинически значимая инфомарция">
-										<div>Связь через одно соединение, основной путь синтеза аргинина: Синетз цитруллина в митохондрии энтероцитов кишечника, затем освобождение цитруллина в организм для синтеза аргинина вне митохондрии</div>
-									</div>
-								</div>
-
-								<div class="item normal">
-									<div class="col_name" data-column="Наименование">
-										<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
-										<span>Аргинин (Arg)</span>
-									</div>
-
-									<div class="col_code" data-column="Код">N27-11</div>
-									<div class="col_value" data-column="Значение">8.87</div>
-
-									<div class="col_result" data-column="Результат">
-										<span class="green">Норма</span>
-									</div>
-
-									<div class="col_metabolism" data-column="Раздел обмена веществ">
-										<div>Аспартат необходим для синтеза аргининоянтарской кислоты (Предшественником аргинина) из цитруллина [1]</div>
-									</div>
-
-									<div class="col_info" data-column="Клинически значимая инфомарция">
-										<div>Связь через одно соединение, основной путь синтеза аргинина: Синетз цитруллина в митохондрии энтероцитов кишечника, затем освобождение цитруллина в организм для синтеза аргинина вне митохондрии</div>
+											<div class="desc">Связь через одно соединение, основной путь синтеза аргинина: Синетз цитруллина в митохондрии энтероцитов кишечника, затем освобождение цитруллина в организм для синтеза аргинина вне митохондрии</div>
+										</div>
 									</div>
 								</div>
 
-								<div class="item downgraded">
-									<div class="col_name" data-column="Наименование">
-										<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
-										<span>Аргинин (Arg)</span>
+								<div class="item">
+									<div class="top">
+										<div class="col_id" data-column="ID">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+											<span>ORG 1</span>
+										</div>
+
+										<div class="col_code" data-column="Код">Т27-11</div>
+										<div class="col_name" data-column="Наименование">Изолейцин ( Lie)</div>
+										<div class="col_value" data-column="Значение">8.87</div>
+
+										<div class="col_result" data-column="Результат">
+											<span class="blue">Понижено</span>
+										</div>
+
+										<svg class="mob_arr"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
 									</div>
 
-									<div class="col_code" data-column="Код">N27-11</div>
-									<div class="col_value" data-column="Значение">8.87</div>
+									<div class="data">
+										<div>
+											<div class="label">Раздел обмена веществ</div>
 
-									<div class="col_result" data-column="Результат">
-										<span class="blue">Понижено</span>
-									</div>
+											<div class="desc">Аспартат необходим для синтеза аргининоянтарской кислоты (Предшественником аргинина) из цитруллина [1]</div>
+										</div>
 
-									<div class="col_metabolism" data-column="Раздел обмена веществ">
-										<div>Аспартат необходим для синтеза аргининоянтарской кислоты (Предшественником аргинина) из цитруллина [1]</div>
-									</div>
+										<div>
+											<div class="label">Клинически значимая инфомарция</div>
 
-									<div class="col_info" data-column="Клинически значимая инфомарция">
-										<div>Связь через одно соединение, основной путь синтеза аргинина: Синетз цитруллина в митохондрии энтероцитов кишечника, затем освобождение цитруллина в организм для синтеза аргинина вне митохондрии</div>
-									</div>
-								</div>
-
-								<div class="item normal">
-									<div class="col_name" data-column="Наименование">
-										<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
-										<span>Аргинин (Arg)</span>
-									</div>
-
-									<div class="col_code" data-column="Код">N27-11</div>
-									<div class="col_value" data-column="Значение">8.87</div>
-
-									<div class="col_result" data-column="Результат">
-										<span class="green">Норма</span>
-									</div>
-
-									<div class="col_metabolism" data-column="Раздел обмена веществ">
-										<div>Аспартат необходим для синтеза аргининоянтарской кислоты (Предшественником аргинина) из цитруллина [1]</div>
-									</div>
-
-									<div class="col_info" data-column="Клинически значимая инфомарция">
-										<div>Связь через одно соединение, основной путь синтеза аргинина: Синетз цитруллина в митохондрии энтероцитов кишечника, затем освобождение цитруллина в организм для синтеза аргинина вне митохондрии</div>
+											<div class="desc">Связь через одно соединение, основной путь синтеза аргинина: Синетз цитруллина в митохондрии энтероцитов кишечника, затем освобождение цитруллина в организм для синтеза аргинина вне митохондрии</div>
+										</div>
 									</div>
 								</div>
 
-								<div class="item normal">
-									<div class="col_name" data-column="Наименование">
-										<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
-										<span>Аргинин (Arg)</span>
+								<div class="item">
+									<div class="top">
+										<div class="col_id" data-column="ID">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+											<span>ORG 1</span>
+										</div>
+
+										<div class="col_code" data-column="Код">Т27-11</div>
+										<div class="col_name" data-column="Наименование">Изолейцин ( Lie)</div>
+										<div class="col_value" data-column="Значение">8.87</div>
+
+										<div class="col_result" data-column="Результат">
+											<span class="red">Повышено</span>
+										</div>
+
+										<svg class="mob_arr"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
 									</div>
 
-									<div class="col_code" data-column="Код">N27-11</div>
-									<div class="col_value" data-column="Значение">8.87</div>
+									<div class="data">
+										<div>
+											<div class="label">Раздел обмена веществ</div>
 
-									<div class="col_result" data-column="Результат">
-										<span class="green">Норма</span>
-									</div>
+											<div class="desc">Аспартат необходим для синтеза аргининоянтарской кислоты (Предшественником аргинина) из цитруллина [1]</div>
+										</div>
 
-									<div class="col_metabolism" data-column="Раздел обмена веществ">
-										<div>Аспартат необходим для синтеза аргининоянтарской кислоты (Предшественником аргинина) из цитруллина [1]</div>
-									</div>
+										<div>
+											<div class="label">Клинически значимая инфомарция</div>
 
-									<div class="col_info" data-column="Клинически значимая инфомарция">
-										<div>Связь через одно соединение, основной путь синтеза аргинина: Синетз цитруллина в митохондрии энтероцитов кишечника, затем освобождение цитруллина в организм для синтеза аргинина вне митохондрии</div>
+											<div class="desc">Связь через одно соединение, основной путь синтеза аргинина: Синетз цитруллина в митохондрии энтероцитов кишечника, затем освобождение цитруллина в организм для синтеза аргинина вне митохондрии</div>
+										</div>
 									</div>
 								</div>
 
-								<div class="item increased">
-									<div class="col_name" data-column="Наименование">
-										<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
-										<span>Аргинин (Arg)</span>
+								<div class="item">
+									<div class="top">
+										<div class="col_id" data-column="ID">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+											<span>ORG 1</span>
+										</div>
+
+										<div class="col_code" data-column="Код">Т27-11</div>
+										<div class="col_name" data-column="Наименование">Изолейцин ( Lie)</div>
+										<div class="col_value" data-column="Значение">8.87</div>
+
+										<div class="col_result" data-column="Результат">
+											<span class="red">Повышено</span>
+										</div>
+
+										<svg class="mob_arr"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
 									</div>
 
-									<div class="col_code" data-column="Код">N27-11</div>
-									<div class="col_value" data-column="Значение">8.87</div>
+									<div class="data">
+										<div>
+											<div class="label">Раздел обмена веществ</div>
 
-									<div class="col_result" data-column="Результат">
-										<span class="red">Повышено</span>
+											<div class="desc">Аспартат необходим для синтеза аргининоянтарской кислоты (Предшественником аргинина) из цитруллина [1]</div>
+										</div>
+
+										<div>
+											<div class="label">Клинически значимая инфомарция</div>
+
+											<div class="desc">Связь через одно соединение, основной путь синтеза аргинина: Синетз цитруллина в митохондрии энтероцитов кишечника, затем освобождение цитруллина в организм для синтеза аргинина вне митохондрии</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="top">
+										<div class="col_id" data-column="ID">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+											<span>ORG 1</span>
+										</div>
+
+										<div class="col_code" data-column="Код">Т27-11</div>
+										<div class="col_name" data-column="Наименование">Изолейцин ( Lie)</div>
+										<div class="col_value" data-column="Значение">8.87</div>
+
+										<div class="col_result" data-column="Результат">
+											<span class="red">Повышено</span>
+										</div>
+
+										<svg class="mob_arr"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
 									</div>
 
-									<div class="col_metabolism" data-column="Раздел обмена веществ">
-										<div>Аспартат необходим для синтеза аргининоянтарской кислоты (Предшественником аргинина) из цитруллина [1]</div>
+									<div class="data">
+										<div>
+											<div class="label">Раздел обмена веществ</div>
+
+											<div class="desc">Аспартат необходим для синтеза аргининоянтарской кислоты (Предшественником аргинина) из цитруллина [1]</div>
+										</div>
+
+										<div>
+											<div class="label">Клинически значимая инфомарция</div>
+
+											<div class="desc">Связь через одно соединение, основной путь синтеза аргинина: Синетз цитруллина в митохондрии энтероцитов кишечника, затем освобождение цитруллина в организм для синтеза аргинина вне митохондрии</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="top">
+										<div class="col_id" data-column="ID">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+											<span>ORG 1</span>
+										</div>
+
+										<div class="col_code" data-column="Код">Т27-11</div>
+										<div class="col_name" data-column="Наименование">Изолейцин ( Lie)</div>
+										<div class="col_value" data-column="Значение">8.87</div>
+
+										<div class="col_result" data-column="Результат">
+											<span class="blue">Понижено</span>
+										</div>
+
+										<svg class="mob_arr"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
 									</div>
 
-									<div class="col_info" data-column="Клинически значимая инфомарция">
-										<div>Связь через одно соединение, основной путь синтеза аргинина: Синетз цитруллина в митохондрии энтероцитов кишечника, затем освобождение цитруллина в организм для синтеза аргинина вне митохондрии</div>
+									<div class="data">
+										<div>
+											<div class="label">Раздел обмена веществ</div>
+
+											<div class="desc">Аспартат необходим для синтеза аргининоянтарской кислоты (Предшественником аргинина) из цитруллина [1]</div>
+										</div>
+
+										<div>
+											<div class="label">Клинически значимая инфомарция</div>
+
+											<div class="desc">Связь через одно соединение, основной путь синтеза аргинина: Синетз цитруллина в митохондрии энтероцитов кишечника, затем освобождение цитруллина в организм для синтеза аргинина вне митохондрии</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="top">
+										<div class="col_id" data-column="ID">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+											<span>ORG 1</span>
+										</div>
+
+										<div class="col_code" data-column="Код">Т27-11</div>
+										<div class="col_name" data-column="Наименование">Изолейцин ( Lie)</div>
+										<div class="col_value" data-column="Значение">8.87</div>
+
+										<div class="col_result" data-column="Результат">
+											<span class="red">Повышено</span>
+										</div>
+
+										<svg class="mob_arr"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+									</div>
+
+									<div class="data">
+										<div>
+											<div class="label">Раздел обмена веществ</div>
+
+											<div class="desc">Аспартат необходим для синтеза аргининоянтарской кислоты (Предшественником аргинина) из цитруллина [1]</div>
+										</div>
+
+										<div>
+											<div class="label">Клинически значимая инфомарция</div>
+
+											<div class="desc">Связь через одно соединение, основной путь синтеза аргинина: Синетз цитруллина в митохондрии энтероцитов кишечника, затем освобождение цитруллина в организм для синтеза аргинина вне митохондрии</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="top">
+										<div class="col_id" data-column="ID">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+											<span>ORG 1</span>
+										</div>
+
+										<div class="col_code" data-column="Код">Т27-11</div>
+										<div class="col_name" data-column="Наименование">Изолейцин ( Lie)</div>
+										<div class="col_value" data-column="Значение">8.87</div>
+
+										<div class="col_result" data-column="Результат">
+											<span class="red">Повышено</span>
+										</div>
+
+										<svg class="mob_arr"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+									</div>
+
+									<div class="data">
+										<div>
+											<div class="label">Раздел обмена веществ</div>
+
+											<div class="desc">Аспартат необходим для синтеза аргининоянтарской кислоты (Предшественником аргинина) из цитруллина [1]</div>
+										</div>
+
+										<div>
+											<div class="label">Клинически значимая инфомарция</div>
+
+											<div class="desc">Связь через одно соединение, основной путь синтеза аргинина: Синетз цитруллина в митохондрии энтероцитов кишечника, затем освобождение цитруллина в организм для синтеза аргинина вне митохондрии</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="top">
+										<div class="col_id" data-column="ID">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+											<span>ORG 1</span>
+										</div>
+
+										<div class="col_code" data-column="Код">Т27-11</div>
+										<div class="col_name" data-column="Наименование">Изолейцин ( Lie)</div>
+										<div class="col_value" data-column="Значение">8.87</div>
+
+										<div class="col_result" data-column="Результат">
+											<span class="red">Повышено</span>
+										</div>
+
+										<svg class="mob_arr"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+									</div>
+
+									<div class="data">
+										<div>
+											<div class="label">Раздел обмена веществ</div>
+
+											<div class="desc">Аспартат необходим для синтеза аргининоянтарской кислоты (Предшественником аргинина) из цитруллина [1]</div>
+										</div>
+
+										<div>
+											<div class="label">Клинически значимая инфомарция</div>
+
+											<div class="desc">Связь через одно соединение, основной путь синтеза аргинина: Синетз цитруллина в митохондрии энтероцитов кишечника, затем освобождение цитруллина в организм для синтеза аргинина вне митохондрии</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="item">
+									<div class="top">
+										<div class="col_id" data-column="ID">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+											<span>ORG 1</span>
+										</div>
+
+										<div class="col_code" data-column="Код">Т27-11</div>
+										<div class="col_name" data-column="Наименование">Изолейцин ( Lie)</div>
+										<div class="col_value" data-column="Значение">8.87</div>
+
+										<div class="col_result" data-column="Результат">
+											<span class="blue">Понижено</span>
+										</div>
+
+										<svg class="mob_arr"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+									</div>
+
+									<div class="data">
+										<div>
+											<div class="label">Раздел обмена веществ</div>
+
+											<div class="desc">Аспартат необходим для синтеза аргининоянтарской кислоты (Предшественником аргинина) из цитруллина [1]</div>
+										</div>
+
+										<div>
+											<div class="label">Клинически значимая инфомарция</div>
+
+											<div class="desc">Связь через одно соединение, основной путь синтеза аргинина: Синетз цитруллина в митохондрии энтероцитов кишечника, затем освобождение цитруллина в организм для синтеза аргинина вне митохондрии</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -368,6 +555,7 @@
 		<!-- Connecting javascript files -->
 		<script src="js/jquery-3.6.3.min.js"></script>
 		<script src="js/functions.js"></script>
+		<script src="js/fancybox.js"></script>
 		<script src="js/imask.js"></script>
 		<script src="js/scripts.js"></script>
 	</body>

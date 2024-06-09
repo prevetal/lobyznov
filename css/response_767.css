@@ -11,6 +11,16 @@
 
 
 
+    /*--------------
+        Fancybox
+    --------------*/
+    .fancybox__slide
+    {
+        padding: 20px;
+    }
+
+
+
     /*-------------
         Sidebar
     -------------*/
@@ -315,13 +325,21 @@
     /*---------------------
         List indicators
     ---------------------*/
-    .list_indicators .col_code,
-    .list_indicators .col_value,
-    .list_indicators .col_result,
-    .list_indicators .col_minimum,
-    .list_indicators .col_maximum
+    .list_indicators .sub_title
     {
-        width: 33.333%;
+        font-size: 18px;
+    }
+
+
+    .list_indicators .col_id,
+    .list_indicators .col_code,
+    .list_indicators .col_percents,
+    .list_indicators .col_result,
+    .list_indicators .col_value,
+    .list_indicators .col_units,
+    .list_indicators .col_referee_int
+    {
+        width: 50%;
     }
 
 
@@ -329,11 +347,42 @@
     /*--------------------
         Interpretation
     --------------------*/
+    .interpretation .filter
+    {
+        flex-wrap: nowrap;
+
+        width: 100%;
+        padding: 4px;
+
+        border-radius: 30px;
+        background: #fff;
+    }
+
+
+    .interpretation .filter .btn
+    {
+        width: 100%;
+    }
+
+
+    .interpretation .filter .btn.active
+    {
+        background: #f9f9f9;
+    }
+
+
+    .interpretation .item + .item
+    {
+        margin-top: 8px;
+    }
+
+
+    .interpretation .col_id,
     .interpretation .col_code,
     .interpretation .col_value,
     .interpretation .col_result
     {
-        width: 33.333%;
+        width: 50%;
     }
 
 

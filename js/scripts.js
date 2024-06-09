@@ -45,36 +45,50 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 
-	// Result in the form of interpretation
-	$('.interpretation .item').click(function(e) {
-		e.preventDefault()
-
-		$(this).toggleClass('open')
-	})
-
-
 	// Result in the form of interpretation - Filter
-	$('.interpretation .filter .btn').click(function(e) {
+	$('body').on('click', '.interpretation .filter .btn', function (e) {
 		e.preventDefault()
 
-		let filter = $(this).data('filter')
+		// let filter = $(this).data('filter')
 
 		$('.interpretation .filter .btn').removeClass('active')
 		$(this).addClass('active')
 
-		$('.interpretation .item').css('display', 'none')
-		$('.interpretation .item.' + filter).css('display', 'flex')
+		// $('.interpretation .item').css('display', 'none')
+		// $('.interpretation .item.' + filter).css('display', 'flex')
+	})
+
+
+	// Result in the form of interpretation - Table spoler
+	$('body').on('click', '.interpretation .item .top', function (e) {
+		e.preventDefault()
+
+		let parent = $(this).closest('.item')
+
+		$(this).toggleClass('open')
+		parent.find('.data').slideToggle(300)
 	})
 
 
 	// Patients
-	$('.patients .patient .head').click(function(e) {
+	$('body').on('click', '.patients .patient .head', function (e) {
 		e.preventDefault()
 
 		let parent = $(this).closest('.patient')
 
 		parent.toggleClass('active')
 		parent.find('.data').slideToggle(300)
+	})
+
+
+	// List of indicators
+	$('body').on('click', '.list_indicators .sub_title', function (e) {
+		e.preventDefault()
+
+		let parent = $(this).closest('.section')
+
+		$(this).toggleClass('active')
+		parent.find('.list').slideToggle(300)
 	})
 
 
@@ -101,6 +115,42 @@ document.addEventListener('DOMContentLoaded', function () {
 		e.preventDefault()
 
 		$('.schema').toggleClass('fullscreen')
+	})
+
+
+	// Fancybox
+	Fancybox.defaults.autoFocus = false
+	Fancybox.defaults.trapFocus = false
+	Fancybox.defaults.dragToClose = false
+	Fancybox.defaults.placeFocusBack = false
+	Fancybox.defaults.l10n = {
+		CLOSE: 'Закрыть',
+		NEXT: 'Следующий',
+		PREV: 'Предыдущий',
+		MODAL: 'Вы можете закрыть это модальное окно нажав клавишу ESC'
+	}
+
+	Fancybox.defaults.tpl = {
+		closeButton: '<button data-fancybox-close class="f-button is-close-btn" title="{{CLOSE}}"><svg><use xlink:href="images/sprite.svg#ic_close"></use></svg></button>',
+
+		main: `<div class="fancybox__container" role="dialog" aria-modal="true" aria-label="{{MODAL}}" tabindex="-1">
+			<div class="fancybox__backdrop"></div>
+			<div class="fancybox__carousel"></div>
+			<div class="fancybox__footer"></div>
+		</div>`,
+	}
+
+
+	// Modals
+	$('.modal_btn').click(function(e) {
+		e.preventDefault()
+
+		Fancybox.close()
+
+		Fancybox.show([{
+			src: document.getElementById(e.target.getAttribute('data-modal')),
+			type: 'inline'
+		}])
 	})
 
 
@@ -134,31 +184,33 @@ document.addEventListener('DOMContentLoaded', function () {
 		startY = parseFloat(styles.getPropertyValue('top'))
 	}
 
-	draggable.addEventListener('mousedown', startDragging)
-	draggable.addEventListener('touchstart', startDragging)
+	if (draggable) {
+		draggable.addEventListener('mousedown', startDragging)
+		draggable.addEventListener('touchstart', startDragging)
 
-	draggable.addEventListener('mousemove', e => {
-		if (isDragging) {
-			let offsetX = (mouseX - e.clientX) * -1,
-				offsetY = (mouseY - e.clientY) * -1
+		draggable.addEventListener('mousemove', e => {
+			if (isDragging) {
+				let offsetX = (mouseX - e.clientX) * -1,
+					offsetY = (mouseY - e.clientY) * -1
 
-			draggable.style.left = startX + offsetX + 'px'
-			draggable.style.top = startY + offsetY + 'px'
-		}
-	})
+				draggable.style.left = startX + offsetX + 'px'
+				draggable.style.top = startY + offsetY + 'px'
+			}
+		})
 
-	draggable.addEventListener('touchmove', e => {
-		if (isDragging) {
-			let offsetX = (mouseX - e.touches[0].clientX) * -1,
-				offsetY = (mouseY - e.touches[0].clientY) * -1
+		draggable.addEventListener('touchmove', e => {
+			if (isDragging) {
+				let offsetX = (mouseX - e.touches[0].clientX) * -1,
+					offsetY = (mouseY - e.touches[0].clientY) * -1
 
-			draggable.style.left = startX + offsetX + 'px'
-			draggable.style.top = startY + offsetY + 'px'
-		}
-	})
+				draggable.style.left = startX + offsetX + 'px'
+				draggable.style.top = startY + offsetY + 'px'
+			}
+		})
 
-	draggable.addEventListener('mouseup', () => isDragging = false)
-	document.addEventListener('touchend', () => isDragging = false)
+		draggable.addEventListener('mouseup', () => isDragging = false)
+		document.addEventListener('touchend', () => isDragging = false)
+	}
 })
 
 

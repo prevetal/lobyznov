@@ -68,18 +68,36 @@
     /*---------------------
         List indicators
     ---------------------*/
-    .list_indicators .item
+    .list_indicators .section + .section
     {
-        justify-content: space-between;
+        margin-top: 24px;
     }
 
 
-    .list_indicators .col_code,
-    .list_indicators .col_value,
-    .list_indicators .col_result,
-    .list_indicators .col_minimum,
-    .list_indicators .col_maximum
+    .list_indicators .sub_title
     {
-        width: calc(50% - 8px);
+        font-size: 16px;
+    }
+
+
+    .list_indicators .item + .item
+    {
+        margin-top: 12px;
+    }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    .modal
+    {
+        padding: 24px 16px;
+    }
+
+
+    .modal_title
+    {
+        padding-right: 40px;
     }
 }

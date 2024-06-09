@@ -29,6 +29,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 
 		<!-- Connecting style files -->
+		<link rel="stylesheet" href="css/fancybox.css" async>
 		<link rel="stylesheet" href="css/styles.css" async>
 
 		<link rel="stylesheet" href="css/response_1439.css" media="print, (max-width: 1439px)" async>
@@ -115,179 +116,289 @@
 							<div class="title">Список показателей</div>
 
 							<div class="titles">
+								<div class="col_id">ID</div>
 								<div class="col_code">Код</div>
 								<div class="col_name">Наименование</div>
-								<div class="col_value">Значение</div>
+								<div class="col_percents">% от рефер.</div>
 								<div class="col_result">Результат</div>
-								<div class="col_minimum">Нижняя граница</div>
-								<div class="col_maximum">Верхняя граница</div>
-								<div class="col_comment">Комментарии</div>
+								<div class="col_value">Значение</div>
+								<div class="col_units">Ед. измерения</div>
+								<div class="col_referee_int">Рефер. инт</div>
 							</div>
 
-							<div class="list">
-								<div class="item">
-									<div class="col_code" data-column="Код">N27-11</div>
-									<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
-									<div class="col_value" data-column="Значение">25.5</div>
-
-									<div class="col_result" data-column="Результат">
-										<span class="red">Повышено</span>
-									</div>
-
-									<div class="col_minimum" data-column="Нижняя граница">29.5</div>
-									<div class="col_maximum" data-column="Верхняя граница">92</div>
-
-									<div class="col_comment" data-column="Комментарии"></div>
+							<div class="section">
+								<div class="sub_title active">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
+									<span>Маркеры углеводного обмена</span>
 								</div>
 
-								<div class="item">
-									<div class="col_code" data-column="Код">N27-11</div>
-									<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
-									<div class="col_value" data-column="Значение">25.5</div>
+								<div class="list" style="display: block;">
+									<div class="item">
+										<div class="col_id" data-column="ID">ORG 1</div>
+										<div class="col_code" data-column="Код">N27-11</div>
+										<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
+										<div class="col_percents" data-column="% от рефер.">25.5</div>
+										<div class="col_result" data-column="Результат">29.5</div>
 
-									<div class="col_result" data-column="Результат">
-										<span class="red">Повышено</span>
+										<div class="col_value" data-column="Значение">
+											<span class="red">Повышено</span>
+										</div>
+
+										<div class="col_units" data-column="Ед. измерения">ммоль / моль креатинина</div>
+										<div class="col_referee_int" data-column="Референсный интервал">29.5-92</div>
 									</div>
 
-									<div class="col_minimum" data-column="Нижняя граница">29.5</div>
-									<div class="col_maximum" data-column="Верхняя граница">92</div>
+									<div class="item">
+										<div class="col_id" data-column="ID">ORG 1</div>
+										<div class="col_code" data-column="Код">N27-11</div>
+										<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
+										<div class="col_percents" data-column="% от рефер.">25.5</div>
+										<div class="col_result" data-column="Результат">29.5</div>
 
-									<div class="col_comment" data-column="Комментарии"></div>
+										<div class="col_value" data-column="Значение">
+											<span class="red">Повышено</span>
+										</div>
+
+										<div class="col_units" data-column="Ед. измерения">ммоль / моль креатинина</div>
+										<div class="col_referee_int" data-column="Референсный интервал">29.5-92</div>
+									</div>
+
+									<div class="item">
+										<div class="col_id" data-column="ID">ORG 1</div>
+										<div class="col_code" data-column="Код">N27-11</div>
+										<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
+										<div class="col_percents" data-column="% от рефер.">25.5</div>
+										<div class="col_result" data-column="Результат">29.5</div>
+
+										<div class="col_value" data-column="Значение">
+											<span class="red">Повышено</span>
+										</div>
+
+										<div class="col_units" data-column="Ед. измерения">ммоль / моль креатинина</div>
+										<div class="col_referee_int" data-column="Референсный интервал">29.5-92</div>
+									</div>
+
+									<div class="item">
+										<div class="col_id" data-column="ID">ORG 1</div>
+										<div class="col_code" data-column="Код">N27-11</div>
+										<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
+										<div class="col_percents" data-column="% от рефер.">25.5</div>
+										<div class="col_result" data-column="Результат">29.5</div>
+
+										<div class="col_value" data-column="Значение">
+											<span class="blue">Понижено</span>
+										</div>
+
+										<div class="col_units" data-column="Ед. измерения">ммоль / моль креатинина</div>
+										<div class="col_referee_int" data-column="Референсный интервал">29.5-92</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="section">
+								<div class="sub_title">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
+									<span>Маркеры углеводного обмена</span>
 								</div>
 
-								<div class="item">
-									<div class="col_code" data-column="Код">N27-11</div>
-									<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
-									<div class="col_value" data-column="Значение">25.5</div>
+								<div class="list">
+									<div class="item">
+										<div class="col_id" data-column="ID">ORG 1</div>
+										<div class="col_code" data-column="Код">N27-11</div>
+										<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
+										<div class="col_percents" data-column="% от рефер.">25.5</div>
+										<div class="col_result" data-column="Результат">29.5</div>
 
-									<div class="col_result" data-column="Результат">
-										<span class="red">Повышено</span>
+										<div class="col_value" data-column="Значение">
+											<span class="red">Повышено</span>
+										</div>
+
+										<div class="col_units" data-column="Ед. измерения">ммоль / моль креатинина</div>
+										<div class="col_referee_int" data-column="Референсный интервал">29.5-92</div>
 									</div>
 
-									<div class="col_minimum" data-column="Нижняя граница">29.5</div>
-									<div class="col_maximum" data-column="Верхняя граница">92</div>
+									<div class="item">
+										<div class="col_id" data-column="ID">ORG 1</div>
+										<div class="col_code" data-column="Код">N27-11</div>
+										<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
+										<div class="col_percents" data-column="% от рефер.">25.5</div>
+										<div class="col_result" data-column="Результат">29.5</div>
 
-									<div class="col_comment" data-column="Комментарии"></div>
+										<div class="col_value" data-column="Значение">
+											<span class="red">Повышено</span>
+										</div>
+
+										<div class="col_units" data-column="Ед. измерения">ммоль / моль креатинина</div>
+										<div class="col_referee_int" data-column="Референсный интервал">29.5-92</div>
+									</div>
+
+									<div class="item">
+										<div class="col_id" data-column="ID">ORG 1</div>
+										<div class="col_code" data-column="Код">N27-11</div>
+										<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
+										<div class="col_percents" data-column="% от рефер.">25.5</div>
+										<div class="col_result" data-column="Результат">29.5</div>
+
+										<div class="col_value" data-column="Значение">
+											<span class="red">Повышено</span>
+										</div>
+
+										<div class="col_units" data-column="Ед. измерения">ммоль / моль креатинина</div>
+										<div class="col_referee_int" data-column="Референсный интервал">29.5-92</div>
+									</div>
+
+									<div class="item">
+										<div class="col_id" data-column="ID">ORG 1</div>
+										<div class="col_code" data-column="Код">N27-11</div>
+										<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
+										<div class="col_percents" data-column="% от рефер.">25.5</div>
+										<div class="col_result" data-column="Результат">29.5</div>
+
+										<div class="col_value" data-column="Значение">
+											<span class="blue">Понижено</span>
+										</div>
+
+										<div class="col_units" data-column="Ед. измерения">ммоль / моль креатинина</div>
+										<div class="col_referee_int" data-column="Референсный интервал">29.5-92</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="section">
+								<div class="sub_title">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
+									<span>Маркеры углеводного обмена</span>
 								</div>
 
-								<div class="item">
-									<div class="col_code" data-column="Код">N27-11</div>
-									<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
-									<div class="col_value" data-column="Значение">25.5</div>
+								<div class="list">
+									<div class="item">
+										<div class="col_id" data-column="ID">ORG 1</div>
+										<div class="col_code" data-column="Код">N27-11</div>
+										<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
+										<div class="col_percents" data-column="% от рефер.">25.5</div>
+										<div class="col_result" data-column="Результат">29.5</div>
 
-									<div class="col_result" data-column="Результат">
-										<span class="green">Норма</span>
+										<div class="col_value" data-column="Значение">
+											<span class="red">Повышено</span>
+										</div>
+
+										<div class="col_units" data-column="Ед. измерения">ммоль / моль креатинина</div>
+										<div class="col_referee_int" data-column="Референсный интервал">29.5-92</div>
 									</div>
 
-									<div class="col_minimum" data-column="Нижняя граница">29.5</div>
-									<div class="col_maximum" data-column="Верхняя граница">92</div>
+									<div class="item">
+										<div class="col_id" data-column="ID">ORG 1</div>
+										<div class="col_code" data-column="Код">N27-11</div>
+										<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
+										<div class="col_percents" data-column="% от рефер.">25.5</div>
+										<div class="col_result" data-column="Результат">29.5</div>
 
-									<div class="col_comment" data-column="Комментарии"></div>
+										<div class="col_value" data-column="Значение">
+											<span class="red">Повышено</span>
+										</div>
+
+										<div class="col_units" data-column="Ед. измерения">ммоль / моль креатинина</div>
+										<div class="col_referee_int" data-column="Референсный интервал">29.5-92</div>
+									</div>
+
+									<div class="item">
+										<div class="col_id" data-column="ID">ORG 1</div>
+										<div class="col_code" data-column="Код">N27-11</div>
+										<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
+										<div class="col_percents" data-column="% от рефер.">25.5</div>
+										<div class="col_result" data-column="Результат">29.5</div>
+
+										<div class="col_value" data-column="Значение">
+											<span class="red">Повышено</span>
+										</div>
+
+										<div class="col_units" data-column="Ед. измерения">ммоль / моль креатинина</div>
+										<div class="col_referee_int" data-column="Референсный интервал">29.5-92</div>
+									</div>
+
+									<div class="item">
+										<div class="col_id" data-column="ID">ORG 1</div>
+										<div class="col_code" data-column="Код">N27-11</div>
+										<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
+										<div class="col_percents" data-column="% от рефер.">25.5</div>
+										<div class="col_result" data-column="Результат">29.5</div>
+
+										<div class="col_value" data-column="Значение">
+											<span class="blue">Понижено</span>
+										</div>
+
+										<div class="col_units" data-column="Ед. измерения">ммоль / моль креатинина</div>
+										<div class="col_referee_int" data-column="Референсный интервал">29.5-92</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="section">
+								<div class="sub_title">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_ver"></use></svg>
+									<span>Маркеры углеводного обмена</span>
 								</div>
 
-								<div class="item">
-									<div class="col_code" data-column="Код">N27-11</div>
-									<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
-									<div class="col_value" data-column="Значение">25.5</div>
+								<div class="list">
+									<div class="item">
+										<div class="col_id" data-column="ID">ORG 1</div>
+										<div class="col_code" data-column="Код">N27-11</div>
+										<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
+										<div class="col_percents" data-column="% от рефер.">25.5</div>
+										<div class="col_result" data-column="Результат">29.5</div>
 
-									<div class="col_result" data-column="Результат">
-										<span class="red">Повышено</span>
+										<div class="col_value" data-column="Значение">
+											<span class="red">Повышено</span>
+										</div>
+
+										<div class="col_units" data-column="Ед. измерения">ммоль / моль креатинина</div>
+										<div class="col_referee_int" data-column="Референсный интервал">29.5-92</div>
 									</div>
 
-									<div class="col_minimum" data-column="Нижняя граница">29.5</div>
-									<div class="col_maximum" data-column="Верхняя граница">92</div>
+									<div class="item">
+										<div class="col_id" data-column="ID">ORG 1</div>
+										<div class="col_code" data-column="Код">N27-11</div>
+										<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
+										<div class="col_percents" data-column="% от рефер.">25.5</div>
+										<div class="col_result" data-column="Результат">29.5</div>
 
-									<div class="col_comment" data-column="Комментарии"></div>
-								</div>
+										<div class="col_value" data-column="Значение">
+											<span class="red">Повышено</span>
+										</div>
 
-								<div class="item">
-									<div class="col_code" data-column="Код">N27-11</div>
-									<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
-									<div class="col_value" data-column="Значение">25.5</div>
-
-									<div class="col_result" data-column="Результат">
-										<span class="red">Повышено</span>
+										<div class="col_units" data-column="Ед. измерения">ммоль / моль креатинина</div>
+										<div class="col_referee_int" data-column="Референсный интервал">29.5-92</div>
 									</div>
 
-									<div class="col_minimum" data-column="Нижняя граница">29.5</div>
-									<div class="col_maximum" data-column="Верхняя граница">92</div>
+									<div class="item">
+										<div class="col_id" data-column="ID">ORG 1</div>
+										<div class="col_code" data-column="Код">N27-11</div>
+										<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
+										<div class="col_percents" data-column="% от рефер.">25.5</div>
+										<div class="col_result" data-column="Результат">29.5</div>
 
-									<div class="col_comment" data-column="Комментарии"></div>
-								</div>
+										<div class="col_value" data-column="Значение">
+											<span class="red">Повышено</span>
+										</div>
 
-								<div class="item">
-									<div class="col_code" data-column="Код">N27-11</div>
-									<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
-									<div class="col_value" data-column="Значение">25.5</div>
-
-									<div class="col_result" data-column="Результат">
-										<span class="blue">Понижено</span>
+										<div class="col_units" data-column="Ед. измерения">ммоль / моль креатинина</div>
+										<div class="col_referee_int" data-column="Референсный интервал">29.5-92</div>
 									</div>
 
-									<div class="col_minimum" data-column="Нижняя граница">29.5</div>
-									<div class="col_maximum" data-column="Верхняя граница">92</div>
+									<div class="item">
+										<div class="col_id" data-column="ID">ORG 1</div>
+										<div class="col_code" data-column="Код">N27-11</div>
+										<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
+										<div class="col_percents" data-column="% от рефер.">25.5</div>
+										<div class="col_result" data-column="Результат">29.5</div>
 
-									<div class="col_comment" data-column="Комментарии"></div>
-								</div>
+										<div class="col_value" data-column="Значение">
+											<span class="blue">Понижено</span>
+										</div>
 
-								<div class="item">
-									<div class="col_code" data-column="Код">N27-11</div>
-									<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
-									<div class="col_value" data-column="Значение">25.5</div>
-
-									<div class="col_result" data-column="Результат">
-										<span class="green">Норма</span>
+										<div class="col_units" data-column="Ед. измерения">ммоль / моль креатинина</div>
+										<div class="col_referee_int" data-column="Референсный интервал">29.5-92</div>
 									</div>
-
-									<div class="col_minimum" data-column="Нижняя граница">29.5</div>
-									<div class="col_maximum" data-column="Верхняя граница">92</div>
-
-									<div class="col_comment" data-column="Комментарии"></div>
-								</div>
-
-								<div class="item">
-									<div class="col_code" data-column="Код">N27-11</div>
-									<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
-									<div class="col_value" data-column="Значение">25.5</div>
-
-									<div class="col_result" data-column="Результат">
-										<span class="blue">Понижено</span>
-									</div>
-
-									<div class="col_minimum" data-column="Нижняя граница">29.5</div>
-									<div class="col_maximum" data-column="Верхняя граница">92</div>
-
-									<div class="col_comment" data-column="Комментарии"></div>
-								</div>
-
-								<div class="item">
-									<div class="col_code" data-column="Код">N27-11</div>
-									<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
-									<div class="col_value" data-column="Значение">25.5</div>
-
-									<div class="col_result" data-column="Результат">
-										<span class="green">Норма</span>
-									</div>
-
-									<div class="col_minimum" data-column="Нижняя граница">29.5</div>
-									<div class="col_maximum" data-column="Верхняя граница">92</div>
-
-									<div class="col_comment" data-column="Комментарии"></div>
-								</div>
-
-								<div class="item">
-									<div class="col_code" data-column="Код">N27-11</div>
-									<div class="col_name" data-column="Наименование">Аргинин (Arg)</div>
-									<div class="col_value" data-column="Значение">25.5</div>
-
-									<div class="col_result" data-column="Результат">
-										<span class="green">Норма</span>
-									</div>
-
-									<div class="col_minimum" data-column="Нижняя граница">29.5</div>
-									<div class="col_maximum" data-column="Верхняя граница">92</div>
-
-									<div class="col_comment" data-column="Комментарии"></div>
 								</div>
 							</div>
 						</div>
@@ -305,6 +416,7 @@
 		<!-- Connecting javascript files -->
 		<script src="js/jquery-3.6.3.min.js"></script>
 		<script src="js/functions.js"></script>
+		<script src="js/fancybox.js"></script>
 		<script src="js/imask.js"></script>
 		<script src="js/scripts.js"></script>
 	</body>

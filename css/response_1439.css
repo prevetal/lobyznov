@@ -135,57 +135,177 @@
     }
 
 
-
     .interpretation .titles
     {
-        font-size: 14px;
-        line-height: 20px;
-
-        margin-bottom: 12px;
-    }
-
-    .interpretation .titles > *
-    {
-        padding: 12px;
+        margin-bottom: 20px;
     }
 
 
-
-    .interpretation .item
+    .interpretation .titles > *,
+    .interpretation .item .top > *
     {
-        font-size: 14px;
-        line-height: 20px;
+        padding: 12px 20px;
     }
 
-    .interpretation .item > *
+
+    .interpretation .item .col_id
     {
-        padding: 4px 12px;
+        padding-left: 0;
     }
 
 
 
-    .interpretation .col_code
+    /*---------------------
+        List indicators
+    ---------------------*/
+    .list_indicators
     {
-        width: 96px;
-        min-width: 96px;
+        padding: 0;
+
+        border-radius: 0;
+        background: none;
     }
 
-    .interpretation .col_name
+
+    .list_indicators .titles
     {
-        width: 160px;
-        min-width: 160px;
+        display: none;
     }
 
-    .interpretation .col_value
+
+    .list_indicators .sub_title
     {
-        width: 100px;
-        min-width: 100px;
+        font-size: 20px;
     }
 
-    .interpretation .col_result
+
+    .list_indicators .sub_title .icon
     {
-        width: 112px;
-        min-width: 112px;
+        width: 20px;
+        height: 20px;
+    }
+
+
+    .list_indicators .sub_title span
+    {
+        width: calc(100% - 28px);
+    }
+
+
+    .list_indicators .item
+    {
+        font-weight: 600;
+        line-height: 18px;
+
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        padding: 24px 16px;
+
+        border-radius: 8px;
+        background: #fff;
+    }
+
+    .list_indicators .item + .item
+    {
+        margin-top: 16px;
+    }
+
+
+    .list_indicators .item > *
+    {
+        position: relative;
+
+        order: 2;
+
+        margin-top: 16px;
+        padding: 20px 0 0;
+    }
+
+    .list_indicators .item > *:before
+    {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: block;
+
+        content: attr(data-column);
+
+        color: #a4abb5;
+    }
+
+
+    .list_indicators .item > * + *
+    {
+        margin-left: 0;
+    }
+
+
+    .list_indicators .item .col_name
+    {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+
+        order: 1;
+
+        margin-top: 0;
+        padding-bottom: 16px;
+
+        color: var(--text_color);
+        border-bottom: 1px solid #f3f3f4;
+    }
+
+    .list_indicators .item .col_name:before
+    {
+        font-weight: 400;
+    }
+
+
+    .list_indicators .item .col_percents
+    {
+        display: none;
+    }
+
+
+    .list_indicators .item .col_result,
+    .list_indicators .item .col_units,
+    .list_indicators .item .col_referee_int
+    {
+        text-align: left;
+    }
+
+
+    .list_indicators .item .col_result,
+    .list_indicators .item .col_value
+    {
+        order: 5;
+    }
+
+
+    .list_indicators .col_id,
+    .list_indicators .col_code,
+    .list_indicators .col_percents,
+    .list_indicators .col_result,
+    .list_indicators .col_value,
+    .list_indicators .col_units,
+    .list_indicators .col_referee_int
+    {
+        width: 25%;
+        min-width: 0;
+    }
+
+    .list_indicators .col_name
+    {
+        width: 100%;
+        min-width: 100%;
     }
 
 
