@@ -117,13 +117,9 @@
 								<div class="title">Результат в виде интерпретации</div>
 
 								<div class="filter">
-									<button class="btn active">Все</button>
-									<button class="btn">Повышено</button>
-									<button class="btn">Понижено</button>
-
-									<!-- <button class="btn active" data-filter="item">Все</button>
+									<button class="btn active" data-filter="*">Все</button>
 									<button class="btn" data-filter="increased">Повышено</button>
-									<button class="btn" data-filter="downgraded">Понижено</button> -->
+									<button class="btn" data-filter="reduced">Понижено</button>
 								</div>
 							</div>
 
@@ -132,19 +128,19 @@
 								<div class="col_code">Код</div>
 								<div class="col_name">Наименование</div>
 
-								<div class="col_value">
+								<div class="col_value sort default">
 									<span>Значение</span>
 									<svg class="icon"><use xlink:href="images/sprite.svg#ic_sort"></use></svg>
 								</div>
 
-								<div class="col_result">
+								<div class="col_result sort default">
 									<span>Результат</span>
 									<svg class="icon"><use xlink:href="images/sprite.svg#ic_sort"></use></svg>
 								</div>
 							</div>
 
 							<div class="list">
-								<div class="item">
+								<div class="item increased">
 									<div class="top">
 										<div class="col_id" data-column="ID">
 											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
@@ -153,7 +149,7 @@
 
 										<div class="col_code" data-column="Код">Т27-11</div>
 										<div class="col_name" data-column="Наименование">Изолейцин ( Lie)</div>
-										<div class="col_value" data-column="Значение">8.87</div>
+										<div class="col_value" data-column="Значение">6.87</div>
 
 										<div class="col_result" data-column="Результат">
 											<span class="red">Повышено</span>
@@ -177,7 +173,7 @@
 									</div>
 								</div>
 
-								<div class="item">
+								<div class="item increased">
 									<div class="top">
 										<div class="col_id" data-column="ID">
 											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
@@ -186,7 +182,7 @@
 
 										<div class="col_code" data-column="Код">Т27-11</div>
 										<div class="col_name" data-column="Наименование">Изолейцин ( Lie)</div>
-										<div class="col_value" data-column="Значение">8.87</div>
+										<div class="col_value" data-column="Значение">7.87</div>
 
 										<div class="col_result" data-column="Результат">
 											<span class="red">Повышено</span>
@@ -210,7 +206,7 @@
 									</div>
 								</div>
 
-								<div class="item">
+								<div class="item increased">
 									<div class="top">
 										<div class="col_id" data-column="ID">
 											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
@@ -219,7 +215,7 @@
 
 										<div class="col_code" data-column="Код">Т27-11</div>
 										<div class="col_name" data-column="Наименование">Изолейцин ( Lie)</div>
-										<div class="col_value" data-column="Значение">8.87</div>
+										<div class="col_value" data-column="Значение">5.87</div>
 
 										<div class="col_result" data-column="Результат">
 											<span class="red">Повышено</span>
@@ -243,7 +239,7 @@
 									</div>
 								</div>
 
-								<div class="item">
+								<div class="item reduced">
 									<div class="top">
 										<div class="col_id" data-column="ID">
 											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
@@ -276,7 +272,40 @@
 									</div>
 								</div>
 
-								<div class="item">
+								<div class="item increased">
+									<div class="top">
+										<div class="col_id" data-column="ID">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+											<span>ORG 1</span>
+										</div>
+
+										<div class="col_code" data-column="Код">Т27-11</div>
+										<div class="col_name" data-column="Наименование">Изолейцин ( Lie)</div>
+										<div class="col_value" data-column="Значение">5.8</div>
+
+										<div class="col_result" data-column="Результат">
+											<span class="red">Повышено</span>
+										</div>
+
+										<svg class="mob_arr"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+									</div>
+
+									<div class="data">
+										<div>
+											<div class="label">Раздел обмена веществ</div>
+
+											<div class="desc">Аспартат необходим для синтеза аргининоянтарской кислоты (Предшественником аргинина) из цитруллина [1]</div>
+										</div>
+
+										<div>
+											<div class="label">Клинически значимая инфомарция</div>
+
+											<div class="desc">Связь через одно соединение, основной путь синтеза аргинина: Синетз цитруллина в митохондрии энтероцитов кишечника, затем освобождение цитруллина в организм для синтеза аргинина вне митохондрии</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="item increased">
 									<div class="top">
 										<div class="col_id" data-column="ID">
 											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
@@ -309,7 +338,7 @@
 									</div>
 								</div>
 
-								<div class="item">
+								<div class="item increased">
 									<div class="top">
 										<div class="col_id" data-column="ID">
 											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
@@ -342,40 +371,7 @@
 									</div>
 								</div>
 
-								<div class="item">
-									<div class="top">
-										<div class="col_id" data-column="ID">
-											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
-											<span>ORG 1</span>
-										</div>
-
-										<div class="col_code" data-column="Код">Т27-11</div>
-										<div class="col_name" data-column="Наименование">Изолейцин ( Lie)</div>
-										<div class="col_value" data-column="Значение">8.87</div>
-
-										<div class="col_result" data-column="Результат">
-											<span class="red">Повышено</span>
-										</div>
-
-										<svg class="mob_arr"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
-									</div>
-
-									<div class="data">
-										<div>
-											<div class="label">Раздел обмена веществ</div>
-
-											<div class="desc">Аспартат необходим для синтеза аргининоянтарской кислоты (Предшественником аргинина) из цитруллина [1]</div>
-										</div>
-
-										<div>
-											<div class="label">Клинически значимая инфомарция</div>
-
-											<div class="desc">Связь через одно соединение, основной путь синтеза аргинина: Синетз цитруллина в митохондрии энтероцитов кишечника, затем освобождение цитруллина в организм для синтеза аргинина вне митохондрии</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="item">
+								<div class="item reduced">
 									<div class="top">
 										<div class="col_id" data-column="ID">
 											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
@@ -408,7 +404,7 @@
 									</div>
 								</div>
 
-								<div class="item">
+								<div class="item increased">
 									<div class="top">
 										<div class="col_id" data-column="ID">
 											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
@@ -441,7 +437,7 @@
 									</div>
 								</div>
 
-								<div class="item">
+								<div class="item increased">
 									<div class="top">
 										<div class="col_id" data-column="ID">
 											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
@@ -474,7 +470,7 @@
 									</div>
 								</div>
 
-								<div class="item">
+								<div class="item increased">
 									<div class="top">
 										<div class="col_id" data-column="ID">
 											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
@@ -507,7 +503,7 @@
 									</div>
 								</div>
 
-								<div class="item">
+								<div class="item reduced">
 									<div class="top">
 										<div class="col_id" data-column="ID">
 											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>

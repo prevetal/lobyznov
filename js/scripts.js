@@ -49,13 +49,78 @@ document.addEventListener('DOMContentLoaded', function () {
 	$('body').on('click', '.interpretation .filter .btn', function (e) {
 		e.preventDefault()
 
-		// let filter = $(this).data('filter')
+		let filter = $(this).data('filter')
 
 		$('.interpretation .filter .btn').removeClass('active')
 		$(this).addClass('active')
 
-		// $('.interpretation .item').css('display', 'none')
-		// $('.interpretation .item.' + filter).css('display', 'flex')
+		if (filter == "*") {
+			$('.interpretation .item').show()
+		} else {
+			$('.interpretation .item').hide()
+			$('.interpretation .item.' + filter).show()
+		}
+	})
+
+	// Result in the form of interpretation - Sort
+	$('body').on('click', '.interpretation .titles .col_value.sort', function (e) {
+		e.preventDefault()
+
+		let list = $('.interpretation .list'),
+			items = list.children('.item')
+
+		$('.interpretation .item').each((i, el) => $(el).css('order', 0))
+
+		if ($(this).hasClass('default')) {
+			$(this).removeClass('default')
+			$(this).addClass('up')
+
+			items.each((i, el) => $(el).css('order', $(el).find('.col_value').text().replace('.', '')))
+		} else if ($(this).hasClass('up')) {
+			$(this).removeClass('up')
+			$(this).addClass('down')
+
+			items.each((i, el) => $(el).css('order', $(el).find('.col_value').text().replace('.', '')))
+
+			$('.interpretation .list').addClass('reverse')
+		} else if ($(this).hasClass('down')) {
+			$(this).removeClass('down')
+			$(this).addClass('default')
+
+			$('.interpretation .list').removeClass('reverse')
+		}
+	})
+
+	$('body').on('click', '.interpretation .titles .col_result.sort', function (e) {
+		e.preventDefault()
+
+		let list = $('.interpretation .list'),
+			items = list.children('.item')
+
+		$('.interpretation .item').each((i, el) => $(el).css('order', 0))
+
+		if ($(this).hasClass('default')) {
+			$(this).removeClass('default')
+			$(this).addClass('up')
+
+			items.each((i, el) => {
+				if ($(el).hasClass('reduced')) $(el).css('order', 1)
+			})
+		} else if ($(this).hasClass('up')) {
+			$(this).removeClass('up')
+			$(this).addClass('down')
+
+			items.each((i, el) => {
+				if ($(el).hasClass('reduced')) $(el).css('order', 1)
+			})
+
+			$('.interpretation .list').addClass('reverse')
+		} else if ($(this).hasClass('down')) {
+			$(this).removeClass('down')
+			$(this).addClass('default')
+
+			$('.interpretation .list').removeClass('reverse')
+		}
 	})
 
 

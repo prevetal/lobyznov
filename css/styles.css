@@ -1728,6 +1728,12 @@ aside .lk_menu a.active
 }
 
 
+.interpretation .titles > *.sort
+{
+    cursor: pointer;
+}
+
+
 .interpretation .titles .col_id
 {
     padding-left: 0;
@@ -1744,6 +1750,24 @@ aside .lk_menu a.active
     margin-left: 2px;
 }
 
+
+
+.interpretation .list
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.interpretation .list.reverse
+{
+    flex-direction: column-reverse;
+}
+
+
+.interpretation .item
+{
+    order: 3;
+}
 
 
 .interpretation .item .top
