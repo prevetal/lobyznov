@@ -145,6 +145,15 @@ document.addEventListener('DOMContentLoaded', function () {
 		parent.find('.data').slideToggle(300)
 	})
 
+	$('body').on('click', '.patients .patient .item.spoler', function (e) {
+		e.preventDefault()
+
+		let parent = $(this).parent()
+
+		parent.toggleClass('active')
+		parent.find('.hide').slideToggle(300)
+	})
+
 
 	// List of indicators
 	$('body').on('click', '.list_indicators .sub_title', function (e) {

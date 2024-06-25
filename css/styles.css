@@ -1119,6 +1119,14 @@ aside .lk_menu a.active
 }
 
 
+.patients .patient .hide
+{
+    display: none;
+
+    padding-left: 12px;
+}
+
+
 .patients .patient .item
 {
     font-size: 16px;
@@ -1135,6 +1143,11 @@ aside .lk_menu a.active
     text-decoration: none;
 
     color: #67697e;
+}
+
+.patients .patient .item.spoler
+{
+    cursor: pointer;
 }
 
 
