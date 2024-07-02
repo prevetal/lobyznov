@@ -62,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	})
 
+
 	// Result in the form of interpretation - Sort
 	$('body').on('click', '.interpretation .titles .col_value.sort', function (e) {
 		e.preventDefault()
@@ -167,14 +168,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Schema
-	let scale = 1
+	let scale = 0.3
 
 	$('.schema .btns .zoom_in_btn').click(function(e) {
 		e.preventDefault()
 
 		scale = scale + 0.1
 
-		$('.schema .data').css('transform', 'scale('+ scale +')')
+		$('.schema .data').css('transform', 'translate(-50%, -50%) scale('+ scale +')')
 	})
 
 	$('.schema .btns .zoom_out_btn').click(function(e) {
@@ -182,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		scale = scale - 0.1
 
-		$('.schema .data').css('transform', 'scale('+ scale +')')
+		$('.schema .data').css('transform', 'translate(-50%, -50%) scale('+ scale +')')
 	})
 
 	$('.schema .btns .fullscreen_btn, .schema .btns .close_btn').click(function(e) {
